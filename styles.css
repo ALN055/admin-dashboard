@@ -1,47 +1,56 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f7f9fc; /* Soft light background */
-    color: #333; /* Dark text for readability */
+    background-color: #f7f7f7; /* Soft light gray background */
+    color: #333; /* Dark gray text for readability */
 }
 
 #sidebar {
-    background-color: #4a90e2; /* Soft blue for sidebar */
+    background: rgba(100, 120, 100, 0.85); /* Muted green with transparency */
     color: white;
     padding: 20px;
-    height: 100vh; /* Full height for sidebar */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    height: 100vh;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #sidebar h2 {
-    color: #fff;
+    font-weight: 500;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle text shadow for contrast */
 }
 
 #sidebar a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     padding: 10px 15px;
     display: block;
-    border-radius: 5px; /* Rounded corners for links */
-    transition: background-color 0.3s;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 #sidebar a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px); /* Slide effect on hover */
 }
 
 #main-content {
     padding: 20px;
+    backdrop-filter: blur(8px); /* Adds subtle blur effect */
+    background: rgba(255, 255, 255, 0.9); /* Transparent white background */
+    border-radius: 10px; /* Rounded corners for the main content */
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 20px;
 }
 
 header h1 {
-    color: #4a90e2; /* Match header color with sidebar */
+    color: #5e6a5e; /* Muted gray-green for the header */
+    font-weight: bold;
+}
+
+header .search-input {
+    border-radius: 20px; /* Rounded search input */
+    padding: 8px 15px;
+    border: 1px solid rgba(100, 120, 100, 0.3); /* Subtle border with transparency */
 }
 
 .grid {
@@ -51,47 +60,51 @@ header h1 {
 }
 
 .project-card {
-    background-color: #ffffff; /* White background for project cards */
+    background: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     text-align: center;
-    border: 1px solid #e0e0e0; /* Light border for better visibility */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.3s, box-shadow 0.3s; /* Animation for hover effect */
+    border: 1px solid rgba(224, 224, 224, 0.7); /* Light border with transparency */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
-    transform: translateY(-3px); /* Lift effect on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slight increase in shadow */
 }
 
 .project-card h3 {
-    color: #4a90e2; /* Soft blue for project titles */
+    color: #4d5b4d; /* Darker shade of green for titles */
 }
 
 .btn {
-    background-color: #5cb85c; /* Soft green button color */
+    background-color: rgba(120, 170, 120, 0.9); /* Soft green button with transparency */
     color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    transition: background-color 0.3s;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn:hover {
-    background-color: #4cae4c; /* Darker green on hover */
+    background-color: rgba(90, 140, 90, 1); /* Darker green on hover */
+    transform: translateY(-2px);
 }
 
 .modal-header {
-    background-color: #4a90e2; /* Match modal header with sidebar */
+    background-color: rgba(100, 120, 100, 0.9); /* Match the sidebar's green shade */
     color: white;
 }
 
+.modal-content {
+    background: rgba(255, 255, 255, 0.95); /* Transparent white */
+    border-radius: 12px;
+}
+
 .modal-footer .btn-secondary {
-    background-color: #6c757d; /* Grey color for close button */
+    background-color: rgba(125, 133, 129, 0.9); /* Soft gray for close button */
     color: white;
 }
 
 .modal-footer .btn-secondary:hover {
-        background-color: #5a6268; /* Darker grey on hover */
-    }
+    background-color: rgba(105, 113, 109, 1); /* Darker gray on hover */
+}
